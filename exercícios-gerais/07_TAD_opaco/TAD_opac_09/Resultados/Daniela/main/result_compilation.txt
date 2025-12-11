@@ -1,0 +1,21 @@
+main.c: In function ‘main’:
+main.c:16:26: warning: assignment to ‘tEmpresa **’ {aka ‘struct empresa **’} from incompatible pointer type ‘tEmpresa *’ {aka ‘struct empresa *’} [-Wincompatible-pointer-types]
+   16 |         bancoEmpresas[i] = e;
+      |                          ^
+main.c:20:37: warning: passing argument 1 of ‘ImprimeEmpresa’ from incompatible pointer type [-Wincompatible-pointer-types]
+   20 |         ImprimeEmpresa(bancoEmpresas[i]);
+      |                        ~~~~~~~~~~~~~^~~
+      |                                     |
+      |                                     tEmpresa ** {aka struct empresa **}
+In file included from main.c:3:
+empresa.h:42:31: note: expected ‘tEmpresa *’ {aka ‘struct empresa *’} but argument is of type ‘tEmpresa **’ {aka ‘struct empresa **’}
+   42 | void ImprimeEmpresa(tEmpresa *empresa);
+      |                     ~~~~~~~~~~^~~~~~~
+main.c:21:35: warning: passing argument 1 of ‘ApagaEmpresa’ from incompatible pointer type [-Wincompatible-pointer-types]
+   21 |         ApagaEmpresa(bancoEmpresas[i]);
+      |                      ~~~~~~~~~~~~~^~~
+      |                                   |
+      |                                   tEmpresa ** {aka struct empresa **}
+empresa.h:26:29: note: expected ‘tEmpresa *’ {aka ‘struct empresa *’} but argument is of type ‘tEmpresa **’ {aka ‘struct empresa **’}
+   26 | void ApagaEmpresa(tEmpresa* empresa);
+      |                   ~~~~~~~~~~^~~~~~~
