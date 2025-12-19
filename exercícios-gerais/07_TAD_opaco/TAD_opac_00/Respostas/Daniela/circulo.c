@@ -2,11 +2,12 @@
 #include <stdlib.h>
 
 #include "circulo.h"
+#include "ponto.h"
 
 struct circulo
 {
-    tPonto* centro;
-    float raio;
+    tPonto centro;
+    int raio;
 };
 
 tCirculo Circulo_Cria (float x, float y, float r){
@@ -36,8 +37,9 @@ float Circulo_Acessa_Raio (tCirculo c){
 }
 
 void Circulo_Atribui_Centro (tCirculo c, tPonto p){
-    Pto_Atribui_x(c->centro, Pto_Acessa_x(p));
-    Pto_Atribui_y(c->centro, Pto_Acessa_y(p));
+    c->centro = p;
+    // Pto_Atribui_x(c->centro, Pto_Acessa_x(p));
+    // Pto_Atribui_y(c->centro, Pto_Acessa_y(p));
 }
 
 void Circulo_Atribui_Raio (tCirculo c, float r){
@@ -49,11 +51,8 @@ int Circulo_Interior (tCirculo c, tPonto p){
     // printf("CENTRO Y:%f\n", Pto_Acessa_y(c->centro));
     // printf("RAIO: %f\n", c->raio);
 
-    tPonto centro = Circulo_Acessa_Centro(c);
-    float raio = Circulo_Acessa_Raio(c);
-
-    if (Pto_Distancia(centro, p) <= raio){
-        return 1;
+    if (Pto_Distancia(c->centro, p) > c->raio){
+        return 0;
     }
-    return 0;
+    return 1;
 }

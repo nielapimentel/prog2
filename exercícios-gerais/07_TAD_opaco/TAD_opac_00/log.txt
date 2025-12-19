@@ -158,8 +158,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Pasta circulo / Caso 3:
  - Arquivo de output gerado: Resultados/Daniela/circulo/Casos/3/result_valgrind.txt.
  - Valgrind: Ok! allocs: 6, frees: 6, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o saida.txt: Incorreto! Peso: 0.0
- - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
  - Pasta circulo / Caso 4:
  - Arquivo de output gerado: Resultados/Daniela/circulo/Casos/4/result_valgrind.txt.
  - Valgrind: Ok! allocs: 6, frees: 6, errors: 0 | Desconto do valgrind: 0.0%
@@ -175,7 +175,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Valgrind: Ok! allocs: 6, frees: 6, errors: 0 | Desconto do valgrind: 0.0%
  - Resultado para o saida.txt: Ok! Peso: 10
  - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
- - Nota para a pasta circulo (máximo 2.50) - 50.00 de 60 - 83.00% de 2.50: 2.07.
+ - Nota para a pasta circulo (máximo 2.50) - 60.00 de 60 - 100.00% de 2.50: 2.50.
  -----
  - Pasta ponto / Caso 1:
  - Arquivo de output gerado: Resultados/Daniela/ponto/Casos/1/result_valgrind.txt.
@@ -228,15 +228,15 @@ Aluno: Daniela
  - Valgrinds corretos: 6 de 6
  - Nota de Daniela para o teste completo: 2.50
  - Teste circulo
- - Resultados corretos: 5 de 6
+ - Resultados corretos: 6 de 6
  - Valgrinds corretos: 6 de 6
- - Nota de Daniela para o teste circulo: 2.07
+ - Nota de Daniela para o teste circulo: 2.50
  - Teste ponto
  - Resultados corretos: 6 de 6
  - Valgrinds corretos: 6 de 6
  - Nota de Daniela para o teste ponto: 2.50
- - Nota de Daniela: 0+(2.07)+(2.50)+(2.50)+(2.50)
- - Nota de Daniela: 9.57
+ - Nota de Daniela: 0+(2.50)+(2.50)+(2.50)+(2.50)
+ - Nota de Daniela: 10.00
 
 ----------------------------------------------------------------------------
 
