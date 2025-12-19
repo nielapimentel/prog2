@@ -1,0 +1,73 @@
+circulo.c: In function ‘Circulo_Cria’:
+circulo.c:14:15: warning: assignment to ‘struct ponto **’ from incompatible pointer type ‘tPonto’ {aka ‘struct ponto *’} [-Wincompatible-pointer-types]
+   14 |     c->centro = Pto_Cria(x, y);
+      |               ^
+circulo.c: In function ‘Circulo_Apaga’:
+circulo.c:26:16: warning: passing argument 1 of ‘Pto_Apaga’ from incompatible pointer type [-Wincompatible-pointer-types]
+   26 |     Pto_Apaga(c->centro);
+      |               ~^~~~~~~~
+      |                |
+      |                struct ponto **
+In file included from circulo.h:15,
+                 from circulo.c:4:
+ponto.h:37:24: note: expected ‘tPonto’ {aka ‘struct ponto *’} but argument is of type ‘struct ponto **’
+   37 | void Pto_Apaga (tPonto p);
+      |                 ~~~~~~~^
+circulo.c: In function ‘Circulo_Acessa_Centro’:
+circulo.c:31:13: warning: returning ‘struct ponto **’ from a function with incompatible return type ‘tPonto’ {aka ‘struct ponto *’} [-Wincompatible-pointer-types]
+   31 |     return c->centro;
+      |            ~^~~~~~~~
+circulo.c: In function ‘Circulo_Atribui_Centro’:
+circulo.c:39:20: warning: passing argument 1 of ‘Pto_Atribui_x’ from incompatible pointer type [-Wincompatible-pointer-types]
+   39 |     Pto_Atribui_x(c->centro, Pto_Acessa_x(p));
+      |                   ~^~~~~~~~
+      |                    |
+      |                    struct ponto **
+ponto.h:58:28: note: expected ‘tPonto’ {aka ‘struct ponto *’} but argument is of type ‘struct ponto **’
+   58 | void Pto_Atribui_x (tPonto p, float x);
+      |                     ~~~~~~~^
+circulo.c:40:20: warning: passing argument 1 of ‘Pto_Atribui_y’ from incompatible pointer type [-Wincompatible-pointer-types]
+   40 |     Pto_Atribui_y(c->centro, Pto_Acessa_y(p));
+      |                   ~^~~~~~~~
+      |                    |
+      |                    struct ponto **
+ponto.h:65:28: note: expected ‘tPonto’ {aka ‘struct ponto *’} but argument is of type ‘struct ponto **’
+   65 | void Pto_Atribui_y (tPonto p, float y);
+      |                     ~~~~~~~^
+circulo.c: In function ‘Circulo_Interior’:
+circulo.c:52:24: warning: passing argument 1 of ‘Pto_Distancia’ from incompatible pointer type [-Wincompatible-pointer-types]
+   52 |     if (Pto_Distancia(c->centro, p) <= c->raio){
+      |                       ~^~~~~~~~
+      |                        |
+      |                        struct ponto **
+ponto.h:73:29: note: expected ‘tPonto’ {aka ‘struct ponto *’} but argument is of type ‘struct ponto **’
+   73 | float Pto_Distancia (tPonto p1, tPonto p2);
+      |                      ~~~~~~~^~
+main.c: In function ‘main’:
+main.c:12:19: warning: initialization of ‘struct circulo **’ from incompatible pointer type ‘tCirculo’ {aka ‘struct circulo *’} [-Wincompatible-pointer-types]
+   12 |     tCirculo* c = Circulo_Cria(centroX, centroY, raio);
+      |                   ^~~~~~~~~~~~
+main.c:13:17: warning: initialization of ‘struct ponto **’ from incompatible pointer type ‘tPonto’ {aka ‘struct ponto *’} [-Wincompatible-pointer-types]
+   13 |     tPonto* p = Pto_Cria(pontoX, pontoY);
+      |                 ^~~~~~~~
+main.c:15:9: warning: the address of ‘Circulo_Interior’ will always evaluate as ‘true’ [-Waddress]
+   15 |     if (Circulo_Interior){
+      |         ^~~~~~~~~~~~~~~~
+main.c:21:19: warning: passing argument 1 of ‘Circulo_Apaga’ from incompatible pointer type [-Wincompatible-pointer-types]
+   21 |     Circulo_Apaga(c);
+      |                   ^
+      |                   |
+      |                   struct circulo **
+In file included from main.c:4:
+circulo.h:41:30: note: expected ‘tCirculo’ {aka ‘struct circulo *’} but argument is of type ‘struct circulo **’
+   41 | void Circulo_Apaga (tCirculo c);
+      |                     ~~~~~~~~~^
+main.c:22:15: warning: passing argument 1 of ‘Pto_Apaga’ from incompatible pointer type [-Wincompatible-pointer-types]
+   22 |     Pto_Apaga(p);
+      |               ^
+      |               |
+      |               struct ponto **
+In file included from circulo.h:15:
+ponto.h:37:24: note: expected ‘tPonto’ {aka ‘struct ponto *’} but argument is of type ‘struct ponto **’
+   37 | void Pto_Apaga (tPonto p);
+      |                 ~~~~~~~^
