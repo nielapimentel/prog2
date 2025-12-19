@@ -9,10 +9,10 @@ int main (){
     float pontoX, pontoY;
 
     scanf("%f %f %f %f %f", &centroX, &centroY, &raio, &pontoX, &pontoY);
-    tCirculo* c = Circulo_Cria(centroX, centroY, raio);
-    tPonto* p = Pto_Cria(pontoX, pontoY);
+    tCirculo c = Circulo_Cria(centroX, centroY, raio);
+    tPonto p = Pto_Cria(pontoX, pontoY);
 
-    if (Circulo_Interior){
+    if (Circulo_Interior(c, p)){
         printf("1");
     } else {
         printf("0");

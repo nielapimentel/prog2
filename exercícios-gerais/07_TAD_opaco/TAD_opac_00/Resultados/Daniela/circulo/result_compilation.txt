@@ -34,12 +34,3 @@ circulo.c:40:20: warning: passing argument 1 of ‘Pto_Atribui_y’ from incompa
 ponto.h:65:28: note: expected ‘tPonto’ {aka ‘struct ponto *’} but argument is of type ‘struct ponto **’
    65 | void Pto_Atribui_y (tPonto p, float y);
       |                     ~~~~~~~^
-circulo.c: In function ‘Circulo_Interior’:
-circulo.c:52:24: warning: passing argument 1 of ‘Pto_Distancia’ from incompatible pointer type [-Wincompatible-pointer-types]
-   52 |     if (Pto_Distancia(c->centro, p) <= c->raio){
-      |                       ~^~~~~~~~
-      |                        |
-      |                        struct ponto **
-ponto.h:73:29: note: expected ‘tPonto’ {aka ‘struct ponto *’} but argument is of type ‘struct ponto **’
-   73 | float Pto_Distancia (tPonto p1, tPonto p2);
-      |                      ~~~~~~~^~

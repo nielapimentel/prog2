@@ -49,7 +49,10 @@ int Circulo_Interior (tCirculo c, tPonto p){
     // printf("CENTRO Y:%f\n", Pto_Acessa_y(c->centro));
     // printf("RAIO: %f\n", c->raio);
 
-    if (Pto_Distancia(c->centro, p) <= c->raio){
+    tPonto centro = Circulo_Acessa_Centro(c);
+    float raio = Circulo_Acessa_Raio(c);
+
+    if (Pto_Distancia(centro, p) <= raio){
         return 1;
     }
     return 0;
