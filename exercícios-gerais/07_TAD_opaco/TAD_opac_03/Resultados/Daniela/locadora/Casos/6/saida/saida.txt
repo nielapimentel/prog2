@@ -1,0 +1,1 @@
+valgrind: Resultados/Daniela/locadora/prog: No such file or directory
